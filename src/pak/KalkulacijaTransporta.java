@@ -12,6 +12,7 @@ public class KalkulacijaTransporta
 		
 		Vozilo auto = new Vozilo("Audi", "456654156",5,TipVozila.Teretno,256030);
 		
+		System.out.println(auto);
 
 	}
 
