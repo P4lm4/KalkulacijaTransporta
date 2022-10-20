@@ -5,20 +5,18 @@ public class Vozilo
 	
 	String ime;
 	String registracija;
-	int brojSasije;
+	double prosjecnaPotrosnja;
 	TipVozila tip;
-	int pocetniKilometri;
 	int amortizacija;
-	int velicinaRezervoara;
+	int cijenaRegistracije;
 	
-	public Vozilo(String ime, String registracija, int brojSasije, TipVozila tip, int pocetniKilometri)
+	
+	public Vozilo(String ime, String registracija, double prosjecnaPotrosnja, TipVozila tip)
 	{
 		
 		this.ime = ime;
 		this.registracija = registracija;
-		this.brojSasije = brojSasije;
 		this.tip = tip;
-		this.pocetniKilometri = pocetniKilometri;
 		
 	}
 	
@@ -40,6 +38,15 @@ public class Vozilo
 		this.registracija = registracija;
 	}
 	
+	public double getProsjecnPotrosnja()
+	{
+		return prosjecnaPotrosnja;
+	}
+	public void setProsjecnaPotrosnja(double prosjecnaPotrosnja)
+	{
+		this.prosjecnaPotrosnja = prosjecnaPotrosnja;
+	}
+	
 	public TipVozila getTip()
 	{
 		return tip;
@@ -49,13 +56,5 @@ public class Vozilo
 		this.tip = tip;
 	}
 	
-	public int setPocetniKilometri()
-	{
-		return pocetniKilometri;
-	}
-	public void getPocetniKilometri(int pocetniKilometri)
-	{
-		this.pocetniKilometri = pocetniKilometri;
-	}
-
+	
 }
