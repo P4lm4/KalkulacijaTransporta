@@ -21,33 +21,40 @@ public class KalkulacijaTransporta
 			Menu();
 			int unosMeni = unos.nextInt();
 			
-		if(unosMeni == 1)
-		{
-			
-		}
-		else if(unosMeni == 2)
-		{
-			
-			while(true)
+			if(unosMeni == 1)
 			{
-				System.out.println("1. Vozaci");
-				System.out.println("2. Vozila");
+			
+			}
+			else if(unosMeni == 2)
+			{
 				
-				int odabir = unos.nextInt();
-				
-				if(odabir == 1)
+				while(true)
 				{
-					System.out.println("1. Spisak vozaca");
-					System.out.println("2. Unos novoga vozaca");
-					System.out.println("3. Povratak na glavni meni");
+					System.out.println("1. Vozaci");
+					System.out.println("2. Vozila");
 					
-					int odabirVozac = unos.nextInt();
+					int odabir = unos.nextInt();
 					
-					if(odabirVozac == 1)
+					if(odabir == 1)
 					{
-						ispisVozaca(vozacList);
+						System.out.println("1. Spisak vozaca");
+						System.out.println("2. Unos novoga vozaca");
+						System.out.println("3. Povratak na prethodni meni");
+						
+						int odabirVozac = unos.nextInt();
+						
+						if(odabirVozac == 1)
+						{
+							ispisVozaca(vozacList);
+						}
+						else if(odabirVozac == 2)
+						{
+							
+						}
+					
+						
 					}
-					else if(odabirVozac == 2)
+					else if(odabir == 2)
 					{
 						
 					}
@@ -55,30 +62,20 @@ public class KalkulacijaTransporta
 					{
 						break;
 					}
-					
 				}
-				else if(odabir == 2)
-				{
-					
-				}
-				else
-				{
-					break;
-				}
+				
+				
 			}
-			
-			
-		}
-		else if(unosMeni == 3)
-		{
-			
-			
-			
-		}
-		else if(unosMeni == 4)
-		{
-			break;
-		}
+			else if(unosMeni == 3)
+			{
+				
+				
+				
+			}
+			else if(unosMeni == 4)
+			{
+				break;
+			}
 		
 		
 		}
@@ -105,10 +102,18 @@ public class KalkulacijaTransporta
 	
 	public static void ispisVozaca(ArrayList<Vozac> ispis)
 	{
-		for(int i = 0; i < ispis.size(); i ++)
+		if(ispis.size() > 0)
 		{
-			System.out.println((i+1) + ") " + ispis.get(i).getIme() + " " + ispis.get(i).getPrezime() + "JMBG: " + ispis.get(i).getJmbg());
+			for(int i = 0; i < ispis.size(); i ++)
+			{
+				System.out.println((i+1) + ") " + ispis.get(i).getIme() + " " + ispis.get(i).getPrezime() + "JMBG: " + ispis.get(i).getJmbg());
+			}
 		}
+		else
+		{
+			System.out.println("Trenutno nema unesenih vozaca u listi!");
+		}
+		
 	}
 
 }
