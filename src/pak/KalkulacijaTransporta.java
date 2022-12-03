@@ -37,8 +37,24 @@ public class KalkulacijaTransporta
 				
 				if(odabir == 1)
 				{
+					System.out.println("1. Spisak vozaca");
+					System.out.println("2. Unos novoga vozaca");
+					System.out.println("3. Povratak na glavni meni");
 					
+					int odabirVozac = unos.nextInt();
 					
+					if(odabirVozac == 1)
+					{
+						ispisVozaca(vozacList);
+					}
+					else if(odabirVozac == 2)
+					{
+						
+					}
+					else
+					{
+						break;
+					}
 					
 				}
 				else if(odabir == 2)
@@ -85,6 +101,14 @@ public class KalkulacijaTransporta
 	public void cijenaGoriva() 
 	{
 		
+	}
+	
+	public static void ispisVozaca(ArrayList<Vozac> ispis)
+	{
+		for(int i = 0; i < ispis.size(); i ++)
+		{
+			System.out.println((i+1) + ") " + ispis.get(i).getIme() + " " + ispis.get(i).getPrezime() + "JMBG: " + ispis.get(i).getJmbg());
+		}
 	}
 
 }
