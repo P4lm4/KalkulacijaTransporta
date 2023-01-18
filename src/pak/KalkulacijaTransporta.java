@@ -10,6 +10,10 @@ public class KalkulacijaTransporta
 	public static void main(String[] args)
 	{
 		
+		String ime;
+		String prezime;
+		String jmbg;
+		
 		ArrayList<Vozilo> voziloList = new ArrayList<>();
 		ArrayList<Vozac> vozacList = new ArrayList<>();
 		ArrayList<Pumpa> pumpaList = new ArrayList<>();
@@ -21,25 +25,29 @@ public class KalkulacijaTransporta
 			Menu();
 			int unosMeni = unos.nextInt();
 			
-			if(unosMeni == 1)
-			{
+		if(unosMeni == 1)
+		{
 			
-			}
-			else if(unosMeni == 2)
+		}
+		else if(unosMeni == 2)
+		{
+			
+			while(true)
 			{
+				System.out.println("1. Vozaci");
+				System.out.println("2. Vozila");
 				
-				while(true)
+				int odabir = unos.nextInt();
+				
+				if(odabir == 1)
 				{
-					System.out.println("1. Vozaci");
-					System.out.println("2. Vozila");
 					
-					int odabir = unos.nextInt();
-					
-					if(odabir == 1)
+					while(true)
 					{
+						
 						System.out.println("1. Spisak vozaca");
 						System.out.println("2. Unos novoga vozaca");
-						System.out.println("3. Povratak na prethodni meni");
+						System.out.println("3. Povratak na glavni meni");
 						
 						int odabirVozac = unos.nextInt();
 						
@@ -50,32 +58,52 @@ public class KalkulacijaTransporta
 						else if(odabirVozac == 2)
 						{
 							
+							unos.nextLine();
+							
+							System.out.println("Ime vozaca: ");
+							ime = unos.nextLine();
+							
+							System.out.println("Prezime vozaca: ");
+							prezime = unos.nextLine();
+							
+							System.out.println("JMBG vozaca: ");
+							jmbg = unos.nextLine();
+							
+							System.out.println("---------------------------------------");
+							unos.nextLine();
+							
+							vozacList.add(new Vozac(ime, prezime, jmbg));
+						}
+						else
+						{
+							break;
 						}
 					
-						
 					}
-					else if(odabir == 2)
-					{
-						
-					}
-					else
-					{
-						break;
-					}
+					
 				}
-				
-				
+				else if(odabir == 2)
+				{
+					
+				}
+				else
+				{
+					break;
+				}
 			}
-			else if(unosMeni == 3)
-			{
-				
-				
-				
-			}
-			else if(unosMeni == 4)
-			{
-				break;
-			}
+			
+			
+		}
+		else if(unosMeni == 3)
+		{
+			
+			
+			
+		}
+		else if(unosMeni == 4)
+		{
+			break;
+		}
 		
 		
 		}
@@ -102,18 +130,10 @@ public class KalkulacijaTransporta
 	
 	public static void ispisVozaca(ArrayList<Vozac> ispis)
 	{
-		if(ispis.size() > 0)
+		for(int i = 0; i < ispis.size(); i ++)
 		{
-			for(int i = 0; i < ispis.size(); i ++)
-			{
-				System.out.println((i+1) + ") " + ispis.get(i).getIme() + " " + ispis.get(i).getPrezime() + "JMBG: " + ispis.get(i).getJmbg());
-			}
+			System.out.println((i+1) + ") Ime: " + ispis.get(i).getIme() + " Prezime: " + ispis.get(i).getPrezime() + " JMBG: " + ispis.get(i).getJmbg());
 		}
-		else
-		{
-			System.out.println("Trenutno nema unesenih vozaca u listi!");
-		}
-		
 	}
 
 }
