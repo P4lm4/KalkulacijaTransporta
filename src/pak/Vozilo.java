@@ -3,7 +3,7 @@ package pak;
 public class Vozilo
 {
 	
-	String ime;
+	String imeVozila;
 	String registracija;
 	double prosjecnaPotrosnja;
 	TipVozila tip;
@@ -11,22 +11,22 @@ public class Vozilo
 	int cijenaRegistracije;
 	
 	
-	public Vozilo(String ime, String registracija, double prosjecnaPotrosnja, TipVozila tip)
+	public Vozilo(String imeVozila, String registracija, double prosjecnaPotrosnja, TipVozila tip)
 	{
 		
-		this.ime = ime;
+		this.imeVozila = imeVozila;
 		this.registracija = registracija;
 		this.tip = tip;
 		
 	}
 	
-	public String getIme()
+	public String getImeVozila()
 	{
-		return ime;
+		return imeVozila;
 	}
-	public void setIme(String ime)
+	public void setImeVozila(String ime)
 	{
-		this.ime = ime;
+		this.imeVozila = ime;
 	}
 	
 	public String getRegistracija()
@@ -38,7 +38,7 @@ public class Vozilo
 		this.registracija = registracija;
 	}
 	
-	public double getProsjecnPotrosnja()
+	public double getProsjecnaPotrosnja()
 	{
 		return prosjecnaPotrosnja;
 	}
@@ -54,6 +54,11 @@ public class Vozilo
 	public void setTip(TipVozila tip)
 	{
 		this.tip = tip;
+	}
+	
+	public String toFileVozilo()
+	{
+		return this.imeVozila + "\n" + this.registracija + "\n" + this.prosjecnaPotrosnja + "\n" + this.tip;
 	}
 	
 	

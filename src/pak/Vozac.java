@@ -43,4 +43,8 @@ public class Vozac
 	{
 		this.jmbg = jmbg;
 	}
+	public String toFileVozac()
+	{
+		return this.ime +"\n" + this.prezime + "\n" + this.jmbg;
+	}
 }
