@@ -1,4 +1,12 @@
 Spitzer
 E80-K-302
 0.0
-Prikljucno
+1
+Scania
+J31-M-456
+0.0
+0
+DAF
+K73-J-735
+38.0
+0

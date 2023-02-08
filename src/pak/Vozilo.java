@@ -16,6 +16,7 @@ public class Vozilo
 		
 		this.imeVozila = imeVozila;
 		this.registracija = registracija;
+		this.prosjecnaPotrosnja = prosjecnaPotrosnja;
 		this.tip = tip;
 		
 	}
@@ -58,7 +59,7 @@ public class Vozilo
 	
 	public String toFileVozilo()
 	{
-		return this.imeVozila + "\n" + this.registracija + "\n" + this.prosjecnaPotrosnja + "\n" + this.tip;
+		return this.imeVozila + "\n" + this.registracija + "\n" + this.prosjecnaPotrosnja + "\n" + this.tip.ordinal();
 	}
 	
 	

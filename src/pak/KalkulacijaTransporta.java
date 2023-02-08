@@ -139,6 +139,8 @@ public class KalkulacijaTransporta
 							TipVozila izborVozila = TipVozila.values()[izborTipVozila - 1];
 							tip = izborVozila;
 							
+							// tip = TipVozila.values()[unos.nextInt() - 1];
+							
 							System.out.println("---------------------------------------");
 							unos.nextLine();
 							
@@ -314,7 +316,10 @@ public class KalkulacijaTransporta
 	{
 		for(int i = 0; i < ispis.size(); i ++)
 		{
-			System.out.println((i+1) + ") Ime: " + ispis.get(i).getImeVozila() + "\n Registracija: " + ispis.get(i).getRegistracija() + "\n Prosjecna potrosnja: " + ispis.get(i).getProsjecnaPotrosnja() + "\n Tip vozila: " + ispis.get(i).getTip());
+			System.out.println((i+1) + ") Ime: " + ispis.get(i).getImeVozila() 
+					+ "\n Registracija: " + ispis.get(i).getRegistracija() 
+					+ "\n Prosjecna potrosnja: " + ispis.get(i).getProsjecnaPotrosnja() 
+					+ "\n Tip vozila: " + ispis.get(i).getTip());
 		}
 	}
 	
@@ -322,7 +327,9 @@ public class KalkulacijaTransporta
 	{
 		for(int i = 0; i < ispis.size(); i ++)
 		{
-			System.out.println((i+1) + ") Ime: " + ispis.get(i).getIme() + " \n Prezime: " + ispis.get(i).getPrezime() + " \n JMBG: " + ispis.get(i).getJmbg());
+			System.out.println((i+1) + ") Ime: " + ispis.get(i).getIme() 
+					+ " \n Prezime: " + ispis.get(i).getPrezime() 
+					+ " \n JMBG: " + ispis.get(i).getJmbg());
 		}
 	}
 
